@@ -4,7 +4,7 @@ import { useEffect } from "react"
 function Letra({letra, pos_letra, pos_texto}){
   const [text, setText] = useState("");
   const [mouse, setMouse] = useState(false)
-  const path = "http://localhost:5173/01abril/src/poemas/" + letra + ".txt"
+  const path = "./src/poemas/" + letra + ".txt"
 
   const data = async ()=> {
       const texto = await fetch(path)
