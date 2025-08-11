@@ -8,7 +8,7 @@ function App() {
   const[teste, setTeste] = useState('')
 
   const get_data = async()=>{
-    let dados = await fetch("./poemas/E.txt")
+    let dados = await fetch("https://pokeapi.co/api/v2/pokemon/ditto")
     return dados.text()
   }
 
@@ -22,7 +22,7 @@ function App() {
       <Letra letra={'E'} pos_letra='660px' pos_texto='590px'/>
       <div style={{position:'absolute', left:'500px', top:'200px',zIndex:'-1', whiteSpace:'pre-wrap'}}>
         <h1>
-          {altas[0].poema}
+          {teste}
         </h1>
         
       </div>

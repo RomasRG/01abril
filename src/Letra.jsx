@@ -4,16 +4,18 @@ import { useEffect } from "react"
 function Letra({letra, pos_letra, pos_texto}){
   const [text, setText] = useState("");
   const [mouse, setMouse] = useState(false)
-  const path = "./src/poemas/" + letra + ".txt"
+  const path = "./" + letra + ".txt"
 
   const data = async ()=> {
       const texto = await fetch(path)
+      console.log(path)
       return texto.text()
   }
 
   useEffect(()=>{
     if(mouse){
     data().then(res => setText(res))
+    console.log(text)
     } else {
       setText('')
     }
