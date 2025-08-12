@@ -1,5 +1,5 @@
 :root{
-    --fundo-pag: #F527CF;
+    --fundo-pag: #FF59F9;
     --linhas-claras: #E3E3E3;
 }
 
@@ -11,11 +11,11 @@
     background: white;
     position: absolute;
     width: auto;
-    height: 700px;
+    height: auto;
     left: 10%;
     right: 10%;
     top: 10%;
-    bottom: 10%;
+    bottom: -70%;
     border-radius: 2%;
 }
 
@@ -35,6 +35,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 1;
 
 }
 
@@ -55,4 +56,30 @@
     align-items: center;
     padding-top: 30%;
     padding-bottom: 30%;
+    z-index: 1;
+}
+
+.search_box{
+    position: absolute;
+    width: 254px;
+    top: 27%;
+    margin-left: -127px;
+    left: 50%;
+}
+
+#imagem{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 34%;
+    left: 17%;
+}
+
+#sub{
+    white-space: break-spaces;
+    font-size: 13px;
+    position: absolute;
+    top: 33%;
+    font-family: monospace;
+    left: 53%;
 }

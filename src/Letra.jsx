@@ -6,11 +6,10 @@ function Letra({letra, pos_letra, pos_texto}){
   const [poema, setPoema] = useState(<></>)
   const [mouse, setMouse] = useState(false)
 
-  const path = "./" + letra + ".txt"
+  const path = "./poemas/" + letra + ".txt"
 
   const data = async ()=> {
       const texto = await fetch(path)
-      console.log(path)
       return texto.text()
   }
 
@@ -20,19 +19,12 @@ function Letra({letra, pos_letra, pos_texto}){
     setPoema(
         <div className="poema">
           {text}
-        </div>
-
-    )
-    console.log(text)
+        </div>)
     } else {
       setText('')
       setPoema(<></>)
     }
-  })
-
-  useEffect
-
-
+  }, [mouse, setMouse, text, setText])
 
     return (
       <div style={{width:'65px', height:'65px'}}>
