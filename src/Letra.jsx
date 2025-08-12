@@ -3,7 +3,9 @@ import { useEffect } from "react"
 
 function Letra({letra, pos_letra, pos_texto}){
   const [text, setText] = useState("");
+  const [poema, setPoema] = useState(<></>)
   const [mouse, setMouse] = useState(false)
+
   const path = "./" + letra + ".txt"
 
   const data = async ()=> {
@@ -15,34 +17,30 @@ function Letra({letra, pos_letra, pos_texto}){
   useEffect(()=>{
     if(mouse){
     data().then(res => setText(res))
+    setPoema(
+        <div className="poema">
+          {text}
+        </div>
+
+    )
     console.log(text)
     } else {
       setText('')
+      setPoema(<></>)
     }
   })
 
+  useEffect
+
+
+
     return (
-      <div>
-        <div style={{
-        position:'absolute', 
-        left:pos_letra, 
-        top:'60px',
-        fontSize:'50px',
-        fontFamily:'fantasy'
-        }} onMouseEnter={()=>setMouse(true)} 
+      <div style={{width:'65px', height:'65px'}}>
+        <div  className='letra' onMouseEnter={()=>setMouse(true)} 
         onMouseLeave={()=>setMouse(false)}>
           {letra}      
         </div>
-        <div  style={{
-          position: 'relative',
-          left:pos_texto, 
-          top:'130px',
-          whiteSpace: "pre-wrap",
-          width:'250px',
-          background:'white'
-          }}>
-          {text}
-        </div>
+          {poema}
       </div>
   )
 }
