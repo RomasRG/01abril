@@ -29,10 +29,13 @@ export default function Pesquisa(){
     }, [setSub, sub])
 
     return(
-        <div style={{display:'flex'}}>
+        <div>
             <input className="search_box" type="text"/>
-            <img id="imagem" src="./imagens/default.jpg"/>
-            <p id="sub">{sub}</p>
+            <div id='content'>
+                <img id="imagem" src="./imagens/default.jpg"/>
+                <p id="sub">{sub}</p>
+            </div>
+            
         </div>
         
     )
