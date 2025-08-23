@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useEffect } from "react"
 
-function Letra({letra, pos_letra, pos_texto}){
+function Letra({letra}){
   const [text, setText] = useState("");
   const [poema, setPoema] = useState(<></>)
   const [mouse, setMouse] = useState(false)

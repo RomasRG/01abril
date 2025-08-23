@@ -12,10 +12,10 @@ function App() {
       <div style={{height: '1000px'}}>
         <div className="secao_branca">
           <div className="love">
-            <Letra letra={'L'} pos_letra='490px' pos_texto='380px'/>
-            <Letra letra={'O'} pos_letra='540px' pos_texto='450px'/>
-            <Letra letra={'V'} pos_letra='600px' pos_texto='520px'/>
-            <Letra letra={'E'} pos_letra='660px' pos_texto='590px'/>
+            <Letra letra={'L'}/>
+            <Letra letra={'O'}/>
+            <Letra letra={'V'}/>
+            <Letra letra={'E'}/>
           </div>
           <Pesquisa/>
         </div>
