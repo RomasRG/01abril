@@ -5,6 +5,7 @@
 
 .fundo_pag{
     background-color: var(--fundo-pag);
+    height: 2000px;
 }
 
 .secao_branca{
@@ -15,7 +16,7 @@
     left: 10%;
     right: 10%;
     top: 10%;
-    bottom: -70%;
+    bottom: -246%;
     border-radius: 2%;
 }
 
@@ -63,12 +64,12 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     width: 100%; 
     box-sizing: border-box; /* Inclui padding e borda no cálculo */
     padding: 2px;
     max-width: 254px;
-    top: 27%;
+    top: 17%;
     margin-left: -127px;
     left: 50%;
 }
@@ -99,11 +100,15 @@
 
 #content{
     display: flex;
+    flex-direction: column;
+    width: 603px;
     position: absolute;
-    top: 33%;
-    margin-left: -207.2px;
+    top: 21%;
+    margin-left: -292px;
     left: 50%;
-    gap: 5%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 audio{
@@ -111,6 +116,30 @@ audio{
     top: 73%;
     right: 63%;
     width: 252px;
+}
+
+#maze{
+    display: flex;
+    flex-direction: column;
+    width: 602px;
+    gap: 2px;
+}
+
+#screen{
+    background: var(--linhas-claras);
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+}
+
+#info{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
 }
 
 @media (max-width: 600px) {
@@ -133,7 +162,7 @@ audio{
         align-items: center;
         padding-top: 30%;
         padding-bottom: 30%;
-        z-index: 1;
+        z-index: 2;
     }
 
     #content {

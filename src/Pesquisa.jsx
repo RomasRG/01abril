@@ -22,8 +22,8 @@ export default function Pesquisa(){
     ]
 
     function caminho(e){
+        setPesquisa('')
         setPath(e)
-        console.log(path)
     }
 
     function Datalist({pesquisas, pesquisa}){
@@ -45,7 +45,6 @@ export default function Pesquisa(){
 
     useEffect(()=>{
         const texto = async ()=>{
-            console.log(path)
             const data = await fetch("./descricoes/" + path + ".txt")
             return data.text()
         }
@@ -56,10 +55,8 @@ export default function Pesquisa(){
         let musica = []
         if(path == 'nossa_musica'){
             musica.push(
-                <audio controls src="./musica/nossa_musica.m4a"/>
+                <audio controls src="./musica/nossa_musica.m4a" key="musica"/>
             )
-        } else {
-            musica.push(<></>)
         }
         return(
             <div>
@@ -78,10 +75,18 @@ export default function Pesquisa(){
             </div>
             
             <div id='content'>
-                <img id="imagem" src={"./imagens/" + path + ".jpg"}/>
-                <p id="sub">{sub}</p>
+                <div id="info">
+                    <img id="imagem" src={"./imagens/" + path + ".jpg"}/>
+                    <p id="sub">{sub}</p>
+                </div>
+                
                 <Musica/>
+                <div id="maze">
+                    <div id="screen">?</div>
+                senha: <input type="text"/>
+                </div>
             </div>
+
             
         </div>
         
