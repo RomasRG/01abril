@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useEffect } from "react"
+import Segredo from "./Segredo"
 import './App.css'
 
 export default function Pesquisa(){
@@ -66,7 +67,6 @@ export default function Pesquisa(){
 
     }
 
-
     return(
         <div>
             <div className="search_box">
@@ -79,17 +79,10 @@ export default function Pesquisa(){
                     <img id="imagem" src={"./imagens/" + path + ".jpg"}/>
                     <p id="sub">{sub}</p>
                 </div>
-                
                 <Musica/>
-                <div id="maze">
-                    <div id="screen">?</div>
-                senha: <input type="text"/>
-                </div>
+                <Segredo/>
             </div>
-
-            
         </div>
-        
     )
 
 
