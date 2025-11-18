@@ -149,6 +149,11 @@ video{
     height: 100%;
 }
 
+#display{
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 600px) {
         .poema{
         position: absolute;
@@ -211,4 +216,8 @@ video{
         justify-content: center;
         font-size: 60px;
     }
+    #info{
+    display: flex;
+    flex-direction: column;
+}
 }

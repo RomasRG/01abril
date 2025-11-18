@@ -68,7 +68,7 @@ export default function Pesquisa(){
     }
 
     return(
-        <div>
+        <div id="display">
             <div className="search_box">
                 <input id="pesquisa" type="text" onChange={(e)=>setPesquisa(e.target.value)}/>
                 <Datalist pesquisas={pesquisas} pesquisa={pesquisa} />
